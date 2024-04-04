@@ -1,0 +1,59 @@
+﻿<Window x:Class="z_zaydy_najat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:z_zaydy_najat"
+        mc:Ignorable="d"
+        Title="Controle Continu 1 " Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.Column="0">
+            <Label Content="Value3:" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+            <Slider HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="500"/>
+            <TextBlock HorizontalAlignment="Left" Margin="25,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Grid.Column="1" Content="Value1:" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120" IsReadOnly="True"/>
+            <Slider HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="500"/>
+            <TextBlock HorizontalAlignment="Left" Margin="25,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Label Grid.Column="1" Content="Value2:" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120" IsReadOnly="True"/>
+            <Slider HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="500"/>
+            <TextBlock HorizontalAlignment="Left" Margin="25,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+        </StackPanel>
+        <Label Content="Updated Values" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Grid.Column="1" Content="Update" HorizontalAlignment="Left" Margin="65,51,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Grid.Column="1" Content="Value1:" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+            <Label Grid.Column="1" Content="Value2:" HorizontalAlignment="Center" Margin="0,8,0,0" VerticalAlignment="Top"/>
+            <Label Grid.Column="1" Content="Value3:" HorizontalAlignment="Center" Margin="0,8,0,0" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" Width="51.89" Height="25.96" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" Width="51.89" Height="25.96" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" Width="51.89" Height="25.96" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+        </StackPanel>
+        <ListBox Grid.Column="2" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="22,10,22,17" SelectionChanged="ListBox_SelectionChanged"/>
+
+
+
+    </Grid>
+</Window>
